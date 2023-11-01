@@ -12,7 +12,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class InMemoryProductRepository implements ProductRepository {
 
-    private DataContainer dataContainer = DataContainer.getInstance();
+    private final DataContainer dataContainer;
 
     @Override
     public Optional<Product> findById(UUID uuid) {
